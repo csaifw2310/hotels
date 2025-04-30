@@ -5,7 +5,8 @@ const app = express();
 const bodyParser=require('body-parser');
 app.use(bodyParser.json()); // req.body
 const db = require('./db');
-
+require('dotenv').config();
+const PORT = process.env.PORT || 3030;
 
 app.get('/', (req, res) => {
   res.send('welcome to my Hotel... how may i help you...? ');
@@ -19,6 +20,8 @@ const menuRoutes= require('./routes/menuRoutes');
 //Use 0f the router
 app.use('/person',personRoutes);
 app.use('/menuItem',menuRoutes);
+
+
 
 
 app.listen(3030,()=>{
