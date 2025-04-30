@@ -8,6 +8,7 @@ const db = require('./db');
 require('dotenv').config();
 const PORT = process.env.PORT || 3030;
 
+
 app.get('/', (req, res) => {
   res.send('welcome to my Hotel... how may i help you...? ');
 });
