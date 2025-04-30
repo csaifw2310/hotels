@@ -3,7 +3,8 @@ const mongoose=require('mongoose');
 
 // define mongodb connection url
 
-const mongoURL='mongodb://localhost:27017/hotels' //replace mydatabase with your database
+// const mongoURL='mongodb://localhost:27017/hotels' //replace mydatabase with your database
+    const mongoURL='mongodb+srv://hotel:rampravesh.yadav@cluster0.kfg699b.mongodb.net/';
 
 // Setup mongodb connections
 mongoose.connect(mongoURL,{
@@ -23,7 +24,7 @@ db.on('connected',()=>{
     console.log("connected to MongoDB server...");
 });
 
-db.on('error', ()=>{
+db.on('error', (err)=>{
     console.error('MongoDB connection error..',err);
 });
 
