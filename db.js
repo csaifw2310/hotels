@@ -9,8 +9,8 @@ require('dotenv').config();
 
 // Setup mongodb connections
 mongoose.connect(mongoURL,{
-    // useNewUrlParser:true,            |
-    // useUnifiedTopology:true          | no need of this in latest version of 
+    useNewUrlParser:true,           // |
+    useUnifiedTopology:true        //  | no need of this in latest version of 
 })
 
 //get the default connection 

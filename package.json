@@ -9,6 +9,7 @@
   "author": "Ram",
   "license": "ISC",
   "dependencies": {
+    "20": "^3.1.9",
     "body-parser": "^2.2.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
