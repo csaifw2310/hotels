@@ -5,10 +5,12 @@ require('dotenv').config();
 // define mongodb connection url
 
 // const mongoURL= process.env.local_db_url; //replace mydatabase with your database
-    const mongoURL=process.env.db_URL;
+    // const mongoURL=process.env.db_URL;
 
 // Setup mongodb connections
 mongoose.connect(mongoURL);
+mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true, tlsInsecure: false });
+
 
 //get the default connection 
 // mongoose maintains the default connection object representing the MongoDB connection.
