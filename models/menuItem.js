@@ -25,7 +25,6 @@ num_sales:{
     type:Number,
     default:0
 }
-
 });
 
 const menuItem = new mongoose.model( 'menuItem',menuItemSchema);

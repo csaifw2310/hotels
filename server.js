@@ -33,10 +33,11 @@ app.get('/',(req, res) => {
 //import the router files
 const personRoutes = require('./routes/personRoutes');
 const menuRoutes= require('./routes/menuRoutes');
+const { jwtAuthMiddleware } = require('./jwt');
 
 
 //Use 0f the router
-app.use('/person',localAuthMiddleware,personRoutes);
+app.use('/person', personRoutes);
 app.use('/menuItem',menuRoutes);
 
 
